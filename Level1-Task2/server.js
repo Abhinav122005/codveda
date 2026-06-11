@@ -36,16 +36,18 @@ app.listen(3000, () => {
 //     "name": "Rahul"
 // }
 app.post('/users', (req, res) => {
-    const newUser = req.body;
+    const newUser = {
+        id: Date.now(),
+        name: req.body.name
+    };
 
     users.push(newUser);
 
-    res.json({
+    res.status(201).json({
         message: "User Added",
         user: newUser
     });
 });
-
 // update the user 
 
 app.put('/users/:id', (req, res) => {
