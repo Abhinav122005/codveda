@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>User Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>User Management System</h1>
+    <div class="container">
+        <h1>User Management System</h1>
 
-    <input type="text" id="name" placeholder="Enter Name">
-    <button onclick="addUser()">Add User</button>
+        <div class="input-group">
+            <input type="text" id="name" placeholder="Enter Name">
+            <button class="add-btn" onclick="addUser()">Add User</button>
+        </div>
 
-    <ul id="userList"></ul>
+        <ul id="userList"></ul>
+    </div>
 
     <script src="script.js"></script>
 
